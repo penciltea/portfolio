@@ -1,0 +1,184 @@
+@use '../../assets/styles/theme';
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0.75rem 0;
+    z-index: 2;
+    background: theme.$base-color;
+    border-bottom: 1px solid #374d6a;
+    
+    ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-content: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+    }
+
+    li {
+        margin: 0 0.75rem;
+
+        img{
+            width: 1.25rem;
+            height: 1.25rem;
+            vertical-align: middle;
+        }
+
+        a {
+            font-size: 1.5rem;
+            color: theme.$base-font-color;
+            font-family: theme.$header-font;
+            text-decoration: none;
+            position: relative;
+            text-transform: uppercase;
+        }
+        a.is-active{
+            color: theme.$accent-color-1;
+        }
+        
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1em;
+            background-color: theme.$accent-color-1;
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+        }
+        
+        a:hover::after,
+        a:focus::after {
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
+        }
+        
+        a::after {
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+        }
+        
+        a:hover::after,
+        a:focus::after {
+            transform: scale(1);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 47.5em) {
+    nav{
+        position: fixed;
+        width: 10rem;
+        top: initial;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-bottom: none;
+        padding: 0;
+        background: transparent;
+    }
+
+    nav.is-mobile {
+        ul{
+            padding: 1rem 0;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            align-content: stretch;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            transform: translateX(-100%);
+            background: theme.$base-color;
+            text-align: center;
+
+            &.open{
+                transform: translateX(0);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            &.closed{
+                transform: translate(-100%);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            li{
+                padding: 0.75rem;
+            }
+        }
+    }
+
+    button{
+        border: none;
+        background: transparent;
+        margin: 0 auto;
+        text-align: center;
+        width: 10rem;
+        height: 5rem;
+        z-index: 3;
+        position: relative;
+        color: theme.$base-color;
+        font: 400 1.5rem / 1 theme.$header-font;
+    }
+
+    button::before{
+        content: '';
+        background: theme.$accent-color-1;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        display: block;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .hamburger{
+        width: 3rem;
+        margin: 2rem auto 0;
+    }
+
+    .hamburger:before,
+    .hamburger:after,
+    .hamburger div {
+        background: #fff;
+        content: "";
+        display: block;
+        height: 6px;
+        border-radius: 3px;
+        margin: 7px 0;
+        transition: 0.5s;
+    }
+    .hamburger.open:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+    .hamburger.open:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+    .hamburger.open div {
+        transform: scale(0);
+    }
+}

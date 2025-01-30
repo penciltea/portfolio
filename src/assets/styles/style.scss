@@ -1,0 +1,96 @@
+@use './reset';
+@use './theme';
+
+html {
+    background: theme.$base-color;
+    font-family: theme.$text-font;
+    color: theme.$base-font-color;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#root {
+    border: 1px solid theme.$accent-color-2;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(154,187,116,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(154,187,116,1);
+    box-shadow: 0px 0px 10px 0px rgba(154,187,116,1);
+    margin: 1rem;
+    position: fixed;
+    height: calc(100vh - 2rem);
+    width: calc(100% - 2rem);
+    overflow: hidden;
+}
+
+main {
+    margin: 0 10vw;
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.content{
+    align-content: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 1rem 0 0;
+
+    &.home {
+        grid-template-columns: 1.125fr 1fr;
+        align-items: center;
+    }
+}
+
+.about{
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 1rem;
+}
+
+h1 {
+    font-family: theme.$header-font;
+    color: theme.$accent-color-2;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+p {
+    font-size: 1.25rem;
+    color: theme.$base-font-color;
+    margin: 1rem 0 0;
+}
+
+@media screen and (max-width: 62.5em){
+    .home.content{
+        padding: 0 0 20%
+    }
+}
+
+@media screen and (max-width: 47.5em){
+    main{
+        margin: 0 5vw;
+
+        .content{
+            margin: 3rem 0;
+        }
+    }
+
+    .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
+}

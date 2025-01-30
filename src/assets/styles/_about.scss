@@ -1,0 +1,58 @@
+@use './theme';
+@use './style.scss';
+
+.content{
+
+    &.about{
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 2rem;
+        align-items: flex-start;
+        padding-bottom: 8rem;
+
+        h1{
+            font-size: 3rem;
+        }
+
+        .content-left{
+
+            div{
+                float: left;
+                width: 14rem;
+                margin: 0 2rem 0 0;
+            }
+
+            p{
+                padding: 0.5rem 0;
+                line-height: 1.75;
+            }
+        }
+
+        .content-right{
+            border-left: 1px solid #374d6a;
+            padding-left: 2rem;
+
+
+            h2{
+                font-family: theme.$header-font;
+                color: theme.$accent-color-2;
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            p.title{
+                color: theme.$accent-color-2;
+                text-decoration: underline;
+                padding: 0.5rem 0;
+            }
+
+            ul{
+
+                li{
+                list-style: circle; 
+                margin-left: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
