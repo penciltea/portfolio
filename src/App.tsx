@@ -17,9 +17,9 @@ function App() {
       <main>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomeComponent />} />
-            <Route path="/about" element={<AboutComponent />} />
-            <Route path="/projects" element={<ProjectsComponent />} />
-            <Route path="/*" element={<NotFoundComponent />} />
+            <Route path="about" element={<AboutComponent />} />
+            <Route path="projects" element={<ProjectsComponent />} />
+            <Route path="*" element={<NotFoundComponent />} />
           </Routes>
       </main>
     </>

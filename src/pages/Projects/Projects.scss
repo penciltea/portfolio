@@ -14,10 +14,14 @@
 
 @media screen and (max-width: 47.5em){
     .projects{
-        padding-bottom: 4rem;
+        padding-bottom: 8rem;
 
         h1{
             margin: 1rem 0 0;
+        }
+
+        p{
+            font-size: 1rem;
         }
     }
 }
