@@ -1,5 +1,6 @@
 @use './reset';
 @use './theme';
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
 
 html {
     background: theme.$base-color;
