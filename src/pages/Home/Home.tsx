@@ -1,4 +1,5 @@
-import circuitree from '../assets/images/circuitree.png'
+import './Home.scss'
+import circuitree from '../../assets/images/circuitree.png'
 
 function HomeComponent(){
     return (  

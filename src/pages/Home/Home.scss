@@ -1,0 +1,30 @@
+
+
+.content{
+    &.home{
+        grid-template-columns: 1.125fr 1fr;
+        align-items: center;
+
+        h1{
+            font-size: 4.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 62.5em){
+    .content{
+        &.home{
+            padding: 0 0 20%
+        }
+    }
+}
+
+@media screen and (max-width: 47.5em){
+    .content{
+        &.home{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+        }
+    }
+}
