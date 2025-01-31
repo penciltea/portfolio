@@ -88,7 +88,7 @@ p {
         }
     }
 
-    .content{
+    .content, .home.content{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-gap: 1rem;
