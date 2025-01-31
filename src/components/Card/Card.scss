@@ -1,33 +1,27 @@
 @use '../../assets//styles/theme';
 
-.projects{
+.card{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+    margin: 1rem 0;
 
-    h1{
-        font-size: 3rem;
-        margin: 2rem 0;
-    }
+    p{
+        &.title{
+            margin: 0;
+            font-size: 1.5rem;
 
-    .card-container{
-        display: flex;
-        flex-flow: column;
-    }
-    
-    .card{
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 2rem;
-        margin: 1rem 0;
-    
-        p{
-            &.title{
-                margin: 0;
-                font-size: 1.5rem;
-    
-                a{
-                    color: theme.$accent-color-1;
-                }
+            a{
+                color: theme.$accent-color-1;
             }
         }
+    }
+}
+
+@media screen and (max-width: 47.5em){
+    .card{
+        grid-template-columns: 1fr;
+        margin: 3rem 0;
     }
 }

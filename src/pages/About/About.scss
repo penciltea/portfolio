@@ -1,5 +1,4 @@
-@use './theme';
-@use './style.scss';
+@use '../../assets/styles/theme';
 
 .content{
 
@@ -56,3 +55,26 @@
     }
 }
 
+@media screen and (max-width: 47.5em){
+    .content{
+
+        &.about{
+            grid-template-columns: 1fr;
+
+            .content-left{
+
+                div{
+                    margin: 0 auto;
+                    float: none;
+                }
+            }
+
+            .content-right{
+                padding: 0;
+                border-left: none;
+            }
+        }
+
+        
+    }
+}

@@ -1,6 +1,11 @@
-import '../assets/styles/_about.scss';
+import { useViewportSize } from '@mantine/hooks'
+
+import './About.scss';
 
 function AboutComponent(){
+    const { width } = useViewportSize()
+    const isMobile = width < 760
+
     const skillArray = [
         {
             title: "Core Skills",
@@ -62,7 +67,7 @@ function AboutComponent(){
     return (
         <div className="content about">
             <section className="content-left">
-                <h1 className="text-center">About Me</h1>
+                <h1 className={ !isMobile ? 'text-center' : undefined }>About Me</h1>
                 <div>
                     <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Prescription02&hairColor=Brown&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
                 />

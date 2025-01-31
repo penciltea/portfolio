@@ -1,8 +1,10 @@
-import CardComponent from '../components/Card/Card'
-import arahayes from '../assets/images/aranaiahayes.jpg'
-import handfulwhimsy from '../assets/images/handfulwhimsy.jpg'
-import dsweb from '../assets/images/dsweb.jpg'
-import vat from '../assets/images/vat.jpg'
+import CardComponent from '../../components/Card/Card'
+import arahayes from '../../assets/images/aranaiahayes.jpg'
+import handfulwhimsy from '../../assets/images/handfulwhimsy.jpg'
+import dsweb from '../../assets/images/dsweb.jpg'
+import vat from '../../assets/images/vat.jpg'
+
+import './Projects.scss';
 
 function ProjectsComponent(){
     const projects = [

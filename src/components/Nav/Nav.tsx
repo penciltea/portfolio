@@ -23,13 +23,10 @@ function NavComponent() {
     const menuDisplay = () => {
         // display menu UL if 1) user is notMobile, 2) if user isMobile & menu isOpen
 
-        if(!isMobile){
+        if(!isMobile || (isMobile && isMenuOpen) ){
             return 'open';
         }
-        if(isMobile && isMenuOpen){
-            return 'open';
-        }
-
+        
         return 'closed';
     }
 

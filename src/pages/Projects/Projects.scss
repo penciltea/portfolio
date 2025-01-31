@@ -1,0 +1,24 @@
+@use '../../assets//styles/theme';
+
+.projects{
+
+    h1{
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+
+    .card-container{
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+@media screen and (max-width: 47.5em){
+    .projects{
+        padding-bottom: 4rem;
+
+        h1{
+            margin: 1rem 0 0;
+        }
+    }
+}

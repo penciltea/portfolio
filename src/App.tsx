@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import './assets/styles/style.scss'
 import NavComponent from './components/Nav/Nav'
 import HomeComponent from './pages/Home'
-import AboutComponent from './pages/About';
-import ProjectsComponent from './pages/Projects';
+import AboutComponent from './pages/About/About';
+import ProjectsComponent from './pages/Projects/Projects';
 
 
 function App() {
