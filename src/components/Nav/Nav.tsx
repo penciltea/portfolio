@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useViewportSize } from '@mantine/hooks'
 import NavItem from './NavItem'
 import linkedinLogo from '../../assets/images/linkedin.png'
+import github from '../../assets/images/github.png'
 import './Nav.scss'
 
 function NavComponent() {
@@ -13,7 +14,8 @@ function NavComponent() {
         { link: '/', title: 'home' },
         { link: '/about', title: 'about' },
         { link: '/projects', title: 'projects' },
-        { link: 'https://www.linkedin.com/in/cliffordbrooke/', target: '_blank', title: <img src={linkedinLogo} alt="view my linkedIn profile" /> }
+        { link: 'https://www.linkedin.com/in/cliffordbrooke/', target: '_blank', title: <img src={linkedinLogo} alt="view my linkedIn profile" /> },
+        { link: 'https://github.com/penciltea', target: '_blank', title: <img src={github} alt="view my GitHub profile" /> }
     ];
 
     const toggleMenu = () => {

@@ -182,3 +182,14 @@ nav {
         transform: scale(0);
     }
 }
+
+@media screen and (max-width: 47.5em){
+    nav {
+        li {
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}
