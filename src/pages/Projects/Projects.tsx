@@ -3,7 +3,7 @@ import arahayes from '../../assets/images/aranaiahayes.jpg'
 import handfulwhimsy from '../../assets/images/handfulwhimsy.jpg'
 import dsweb from '../../assets/images/dsweb.jpg'
 import vat from '../../assets/images/vat.jpg'
-import realmfoundry from '../../assets/images/realmfoundry.png'
+import realmfoundry from '../../assets/images/realmfoundry.jpg'
 
 import './Projects.scss';
 
