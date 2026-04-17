@@ -1,18 +1,16 @@
+import Chip from '../Chip/Chip';
 import './Card.scss'
 
 interface cardProps{
-    image: string,
-    title: string,
+    title: string,    
+    chips: string[];
     description: string,
-    link?: string
+    link?: string,
 }
 
-function CardComponent({image, title, description, link}: cardProps){
+function CardComponent({ title, description, link, chips }: cardProps){
     return (
         <div className="card">
-            <div className="image">
-                <img src={image} />
-            </div>
             <div>
                 <p className="title">
                     {link 
@@ -20,6 +18,9 @@ function CardComponent({image, title, description, link}: cardProps){
                         : <>{ title }</>
                     }
                 </p>
+                {chips.map((chip, idx) => (
+                    <Chip key={ idx } label={ chip } />
+                ))}
                 <p className="description">{description}</p>
             </div>
         </div>

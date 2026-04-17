@@ -1,11 +1,9 @@
 @use '../../assets//styles/theme';
 
 .card{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
-    margin: 1rem 0;
+    display: flex;
+    flex-flow: column;
+    margin: 2rem 0;
 
     p{
         &.title{
